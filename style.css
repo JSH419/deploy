@@ -116,7 +116,6 @@ main h2{
     font-size: 3.5rem;
     margin:2rem 0;
     letter-spacing: 3px;
-    
 }
 main p{
     max-width: 500px;
@@ -125,7 +124,7 @@ main p{
 } 
 main button.download{
     background: transparent;
-    border:3px solid white;
+    border:5px solid white;
     border-radius: 20px;
     padding: 1rem 2rem;
     margin-top: 3rem;
@@ -136,7 +135,7 @@ main button.download{
 main button.mouse{
     background-color: transparent;
     border:none;
-    font-size: 2rem;
+    font-size: 5rem;
     position: absolute; 
     bottom:1rem;
     left:50%;
@@ -220,7 +219,7 @@ section .about-self .right{
     padding: 0 2rem;
 }
 section .about-self .right h3{
-    font-size: 2.25rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 section .about-self .right h3 strong{
@@ -229,6 +228,11 @@ section .about-self .right h3 strong{
 section .about-self .right p{
     font-size:  1.15rem;
     margin: 1rem 0;
+}
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* 아이콘 사이의 간격 설정 */
 }
 section .about-self .right .social a{
     font-size: 2.5rem;
