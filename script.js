@@ -73,12 +73,8 @@ writeTxt();
 
 //이력서(cv) 다운 받기 
 function downloadCV() {
-    // 이력서 파일의 경로와 파일명을 설정
-    var filePath = "https://drive.google.com/file/d/1zAsdcMuDNAvwkBbyFelrqPBPAcBzYnal/view?usp=sharing";
-    // 버튼을 클릭하면 다운로드 링크를 생성하고 클릭
+    var fileID = "1Iqs4aYS4u27ombYSYAYPtz1GMy4fPcVC"; // Google Drive 파일의 ID
     var link = document.createElement("a");
-    link.href = filePath;
-    link.download = "이력서.pdf";
-    link.target = "_blank"; // 다운로드 창을 새 탭에서 열기 
+    link.href = "https://drive.google.com/uc?export=download&id=" + fileID;
     link.click();
 }

@@ -289,7 +289,7 @@ section .portfolio-me::after{
     clear: both;
 }
 section .portfolio-me .portfolio-inner{
-    width:30%;
+    width:33.3%;
     margin-right: 5%;
     background-color: #fff;
     float: left;
