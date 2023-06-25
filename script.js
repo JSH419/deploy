@@ -6,6 +6,7 @@
     let currentTxt = txtArr[index].split("");
     console.log(currentTxt);
 
+// 텍스트 작성 함수    
 function writeTxt(){
     spanE1.textContent += currentTxt.shift();
     if(currentTxt.length !==0){setTimeout(writeTxt, Math.floor(Math.random()*100));
@@ -15,6 +16,7 @@ function writeTxt(){
     }
 }
 
+// 텍스트 삭제 함수 
 function deleteTxt(){
     currentTxt.pop();
     spanE1.textContent = currentTxt.join("");

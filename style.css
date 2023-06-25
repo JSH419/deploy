@@ -59,11 +59,15 @@ li{
     background: transparent;
     border:0;
     cursor: pointer;
-    color:white;
+    color:rgb(255, 255, 255);
   }
   header h1 button{
     font-size: 2rem;
     font-weight: bold;
+  }
+  button[data-animation-scroll="true"]:hover {
+    background-color: #ed4848; 
+    color: white; 
   }
   header nav ul li button{
     font-size: 1.2rem;
@@ -132,6 +136,11 @@ main button.download{
     font-weight: bold;
     cursor: pointer;
 }
+main button.download:hover {
+    background-color: #ed4848; 
+    color: #fff; 
+}
+
 main button.mouse{
     background-color: transparent;
     border:none;
@@ -143,6 +152,7 @@ main button.mouse{
     color:white;
     animation: upDown 1s ease-in-out infinite;
 }
+
 main h2 span::after{
     content:"";
     height: 40px;
@@ -181,8 +191,6 @@ section:nth-child(2n){
     background-color: #f8f8f8;
 }
 
-
-
 section .title{
     margin-bottom: 3rem;
 }
@@ -197,6 +205,7 @@ section .title h2{
 section .title p{
     font-size: 1.15rem;
 }
+
 
 
 /* About_me.css */
@@ -312,6 +321,11 @@ section .portfolio-me .portfolio-inner Strong{
 }
 section .portfolio-me .portfolio-inner h3{
     font-size: 1.75rem;
+}
+
+.portfolio-inner:hover {
+    background-color: #f5a4a4 !important;
+    color: white;
 }
 
 /* CONTACT WITH ME */
