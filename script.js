@@ -75,7 +75,7 @@ writeTxt();
 
 //이력서(cv) 다운 받기 
 function downloadCV() {
-    var fileID = "1Iqs4aYS4u27ombYSYAYPtz1GMy4fPcVC"; // Google Drive 파일의 ID
+    var fileID = "1uiMtmqLTMp4pYbNFFQq2V5dUxI_PoXKf"; // Google Drive 파일의 ID
     var link = document.createElement("a");
     link.href = "https://drive.google.com/uc?export=download&id=" + fileID;
     link.click();

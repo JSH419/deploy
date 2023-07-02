@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Project</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">        
+    <link rel="stylesheet" href="style.css">     
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>   
 </head>   
 <body>
     <!-- HEADER -->
@@ -131,11 +132,13 @@
                 <strong>Spring</strong>
                 <h3>게시판 만들기</h3>
             </div>
-            <div class="portfolio-inner">
-                <img width="350" height="200" img src="./images/JavascriptIcon.png" alt="javascript아이콘">
-                <strong>Javascript</strong>
-                <h3>무한스크롤 기능</h3>
-            </div>
+            <a href="https://diocoding.tistory.com/entry/%ED%8C%80-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Javascript-%EA%B8%B0%EB%8A%A5-%EA%B5%AC%ED%98%84" target="_blank">
+                <div class="portfolio-inner">
+                    <img width="350" height="200" img src="./images/JavascriptIcon.png" alt="javascript아이콘">
+                    <strong>Javascript</strong>
+                    <h3>무한스크롤 기능</h3>
+                </div>
+            </a>
             <a href="https://colab.research.google.com/drive/1P4Ojj4r8oqhxWNoaxzwVFbZUVdWXHivx?usp=sharing" target="_blank">
                 <div class="portfolio-inner">
                     <img width="350" height="200" img src="./images/PythonIcon.png" alt="Python아이콘">
@@ -143,23 +146,27 @@
                     <h3>배당금 계산 프로그램</h3>
                 </div>
             </a>
-            <div class="portfolio-inner">
-                <img width="350" height="200" img src="./images/umlIcon.png" alt="uml아이콘">
-                <strong>PlantUML</strong>
-                <h3>유즈케이스 다이어그램</h3>
-            </div>
+            <a href="https://docs.google.com/presentation/d/1Gdh7aG-DqF0DQltXHJM9nwSkm6cc27-HngG7AeG78xg/edit?usp=sharing" target="_blank">
+                <div class="portfolio-inner">
+                    <img width="350" height="200" img src="./images/umlIcon.png" alt="uml아이콘">
+                    <strong>PlantUML</strong>
+                    <h3>다이어그램</h3>
+                </div>
+            </a>
             <a href="https://colab.research.google.com/drive/1PQ431Zy50dHytDehyrT9y53GBaNaV1rT?usp=sharing" target="_blank">
                 <div class="portfolio-inner">
                     <img width="350" height="200" img src="./images/aiIcon.png" alt="ai아이콘">
                     <strong>python</strong>
                     <h3>머신러닝 함수</h3>
                 </div>
-            </a>    
-            <div class="portfolio-inner">
-                <img width="350" height="200" img src="./images/webIcon.png" alt="web아이콘">
-                <strong>netlify</strong>
-                <h3>도메인 등록</h3>
-            </div>
+            </a>
+            <a href="https://diocoding.tistory.com/entry/%EB%8F%84%EB%A9%94%EC%9D%B8%EC%9D%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80-cafe24%EC%97%90%EC%84%9C-%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B5%AC%EB%A7%A4-%ED%9B%84-%EB%82%B4-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0" target="_blank">    
+                <div class="portfolio-inner">
+                    <img width="350" height="200" img src="./images/webIcon.png" alt="web아이콘">
+                    <strong>netlify</strong>
+                    <h3>도메인 등록</h3>
+                </div>
+            </a>
            </div>
         </div>
    </section>
@@ -216,7 +223,24 @@
                         <label for="msg">message</label>
                         <textarea id="msg"></textarea>
                     </div>
-                    <button>send</button>
+                    <button onclick="sendNote(event)">send</button>
+                    <script>
+                        function sendNote(event) {
+                          event.preventDefault();
+                          swal({
+                            title: "쪽지를 보내시겠습니까?",
+                            text: "확인을 누르면 쪽지가 전송됩니다.",
+                            icon: "info",
+                            buttons: ["확인", "취소"],
+                          }).then(function (value) {
+                            if (value) {
+                              swal("전송이 취소되었습니다.");
+                            } else {
+                              swal("쪽지가 전송되었습니다.");
+                            }
+                          });
+                        }
+                      </script>
                 </form>
             </div>
 
