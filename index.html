@@ -127,11 +127,13 @@
             <h2>Portfolio</h2>
            </div> 
            <div class="portfolio-me">
-            <div class="portfolio-inner">
-                <img width="350" height="200" src="https://img.icons8.com/color/350/spring-logo.png" alt="spring-logo"/>
-                <strong>Spring</strong>
-                <h3>게시판 만들기</h3>
-            </div>
+            <a href="https://drive.google.com/file/d/1izQ_q_WiO5toMHx84ixfAQ_8jGFST4z-/view?usp=sharing" target="_blank">
+                <div class="portfolio-inner">
+                    <img width="350" height="200" src="https://img.icons8.com/color/350/spring-logo.png" alt="spring-logo"/>
+                    <strong>Spring</strong>
+                    <h3>게시판 만들기</h3>
+                </div>
+            </a>
             <a href="https://diocoding.tistory.com/entry/%ED%8C%80-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Javascript-%EA%B8%B0%EB%8A%A5-%EA%B5%AC%ED%98%84" target="_blank">
                 <div class="portfolio-inner">
                     <img width="350" height="200" img src="./images/JavascriptIcon.png" alt="javascript아이콘">
@@ -213,20 +215,20 @@
                 <form action="#">
                     <div class="form-group">
                         <label for="name">name</label>
-                        <input type="text" id="name" autocomplete="off">
+                        <input type="text" id="name" autocomplete="off" required>
                     </div>
                     <div class="form-group">
                         <label for="email">email</label>
-                        <input type="text" id="email" autocomplete="off">
+                        <input type="text" id="email" autocomplete="off" required>
                     </div>
                     <div class="form-group">
                         <label for="msg">message</label>
-                        <textarea id="msg"></textarea>
+                        <textarea id="msg" required></textarea>
                     </div>
                     <button onclick="sendNote(event)">send</button>
                     <script>
                         function sendNote(event) {
-                          event.preventDefault();
+                          event.preventDefault();   
                           swal({
                             title: "쪽지를 보내시겠습니까?",
                             text: "확인을 누르면 쪽지가 전송됩니다.",
@@ -243,7 +245,6 @@
                       </script>
                 </form>
             </div>
-
         </div>
     </div>
   </section>   
